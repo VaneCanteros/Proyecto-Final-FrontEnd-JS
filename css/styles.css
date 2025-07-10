@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+/* Estilos generales */
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Nunito', sans-serif;
+    background-color: #E6D9C0; 
+    color: #3C3C3C; 
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Encabezado */
+header {
+    background-color: #9AAB8E;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Logo */
+.logo {
+    width: 50px; 
+    height: auto;
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Ocultar el checkbox */
+#menu-hamburguesa {
+    display: none;
+}
+
+/* Icono del menú */
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+}
+
+/* Estilos del menú */
+.menu {
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    gap: 15px;
+}
+/* Mostrar el menú cuando el checkbox está marcado */
+#menu-hamburguesa:checked ~ .menu {
+    display: flex;
+}
+/* Menú de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start; 
+    flex-grow: 1; 
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Estilos de la barra de búsqueda */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+h1{
+    text-align: center;
+}
+
+.resultados {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 10px;
+    padding: 10px;
+    display: none;
+}
+
+.resultado-item {
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.resultado-item:hover {
+    background-color: #f9f9f9;
+}
+
+#limpiar-busqueda {
+    margin-left: 10px;
+    font-size: 1.2rem;
+    color: #666;
+    transition: color 0.2s;
+}
+
+#limpiar-busqueda:hover {
+    color: #000;
+}
+
+.destacado {
+    outline: 3px solid #84c7ae; /* tono armonioso, podés cambiarlo */
+    background-color: #f3fdf8;
+    transition: outline 0.4s ease;
+    animation: resaltar 1.5s ease;
+}
+
+@keyframes resaltar {
+    0%   { background-color: #f3fdf8; }
+    50%  { background-color: #d1f3e2; }
+    100% { background-color: #f3fdf8; }
+}
+
+
+
+/* Banner */
+.banner {
+    background-color: #B799C8; 
+    text-align: center;
+    padding: 50px;
+    color: white;
+    font-size: 1.5em;
+}
+
+
+
+
+/* Productos */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.producto {
+    background-color: white;
+    border: 2px solid #9AAB8E; 
+    padding: 15px;
+    margin: 15px;
+    text-align: center;
+    width: 250px;
+}
+
+.producto h3 {
+    color: #3C3C3C; 
+}
+
+.producto img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.producto button {
+    background-color: #D6A74E; 
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.producto button:hover {
+    background-color: #B799C8;
+}
+
+/*Bienvenida*/
+.video_bienvenida {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1px; 
+    padding: 20px;
+}
+
+
+.bienvenida {
+    width: 65%; 
+    text-align: left;
+    font-size: 2vw;
+}
+
+/*Contacto*/
+.contacto-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: #F5E4C3;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contacto-info {
+    width: 30%;
+}
+
+.contacto-info h2 {
+    color: #8A4D76;
+}
+
+.formulario-contacto {
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario-contacto label {
+    font-weight: bold;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #9AAB8E;
+    border-radius: 5px;
+}
+
+.formulario-contacto button {
+    background-color: #D6A74E;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.formulario-contacto button:hover {
+    background-color: #B799C8;
+}
+
+.error {
+    color: crimson;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    display: block;
+}
+
+
+/*Carrito de compras*/
+.carrito {
+    background-color: #F5E4C3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 40px auto;
+}
+
+.carrito h2{
+    font-size: 1.5em;
+    margin-top: 15px;
+    text-align: center;
+}
+.carrito-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.carrito-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.total {
+    font-size: 1.5em;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.pagar{
+    background-color: #D6A74E;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.pagar:hover {
+    background-color: #B799C8;
+}
+
+
+#contenedor-carrito {
+    
+    clear: both;
+    width: 100%;
+    margin-top: 40px;
+}
+
+#carrito {
+    padding: 0;
+    list-style: none;
+}
+
+#carrito li {
+    padding: 10px;
+    margin: 8px 0;
+    background-color: #ffffff;
+    border-left: 4px solid #9aab8e;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+#carrito button {
+    background-color: #d6a74e;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    margin-left: 4px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+    #carrito button:hover {
+    background-color: #b799c8;
+}
+
+
+
+
+
+/* Footer */
+footer {
+    background-color: #3C3C3C; 
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.container{
+    margin:25 px;
+    font-size: 2vw;
+
+}
+
+/*Media Queries*/
+@media (max-width: 768px) {
+    .search-bar {
+        display: none; /* Oculta la barra de búsqueda */
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #9AAB8E;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    /* Mostrar menú cuando el checkbox está marcado */
+    #menu-hamburguesa:checked + .menu {
+        display: flex;
+    }
+
+    .menu li {
+        padding: 10px 0;
+    }
+
+    .menu li a {
+        color: white;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    .formulario-contacto {
+        padding: 20px;
+    }
+    .formulario-contacto input,
+    .formulario-contacto textarea {
+        font-size: 1rem;
+        padding: 8px;
+    }
+    .video_bienvenida {
+        flex-direction: column;
+        align-items: center;
+    }
+    .bienvenida {
+        width: 100%;
+        text-align: center;
+    }
+}
+

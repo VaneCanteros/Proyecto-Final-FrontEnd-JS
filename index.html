@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namaste-Tienda Holística</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img class="logo" src="media/img/logo.png" alt="Logo de la tienda holística">
+
+            <!-- Menú Hamburguesa -->
+            <input type="checkbox" id="menu-hamburguesa">
+            <label for="menu-hamburguesa" class="menu-icon">☰</label>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pages/productos.html">Productos</a></li>
+                <li><a href="pages/sobre_nostros.html">Sobre Nosotros</a></li>
+                <li><a href="pages/contacto.html">Contacto</a></li>
+                <li><a href="pages/carrito.html">Carrito</a></li>
+            </ul>
+
+            <form class="search-bar" id="form-busqueda">
+                <input type="text" placeholder="Buscar productos..." name="search">
+                <button type="submit">🔍</button>
+                <span id="limpiar-busqueda" style="display: none; cursor: pointer;">✖️</span>
+            </form>
+
+            <div id="resultados-busqueda" class="resultados"></div>
+
+        </nav>
+    </header>
+    
+
+    <main>
+        <h1>Namasté | Tienda Holística</h1>
+        <section class="banner">
+            <h2>Descubre la armonía con nuestras velas y productos holísticos</h2>
+        </section>
+
+        <section class="video_bienvenida">
+            <video src="media/video/velas.mp4" alt="video velas" type="video/mp4"  controls>Tu navegador no soporta el video</video>
+            <div class="bienvenida">
+                <h3>BIENVENIDOS A NUESTRA TIENDA HOLISTICA</h3>
+                <p>Te invitamos a ser parte de este hermoso camino, donde cada vela y accesorio es creado con amor, dedicación y respeto por la naturaleza.</p>
+                <p>Descubrí la magia de la luz y la energía positiva en cada uno de nuestros productos. Sumate a este viaje en el que buscamos equilibrio, armonía y bienestar a través de materiales 100% naturales.</p>
+                <p>Encendamos juntos la llama de la conexión, la creatividad y el bienestar.</p>
+            </div>
+        </section>
+
+        <section class="productos" >
+            <article class="producto" id="vela-ositos">
+                <img src="media/img/ositos.webp" alt="Vela ositos">
+                <h3>Vela Ositos</h3>
+                <h4>$7.500</h4>
+                <p>Relájate con nuestras velas de esencia natural.</p>
+                <button onclick="agregarAlCarrito('Vela Ositos', 7500)">Agregar al carrito</button>
+            </article>
+
+            <article class="producto" id="vela-buenas-vibras">
+                <img src="media/img/buenas vibras.webp" alt="Vela Vaso Buenas Vibras">
+                <h3>Vela Buenas Vibras</h3>
+                <h4>$14.000</h4>
+                <p>Las aliadas perfectas para crear un ambiente positivo y lleno de energia.Elaboradas con cera de soja, que lo convierte en una opción ecológica y saludable para el hogar.</p>
+                <button onclick="agregarAlCarrito('Vela Buenas Vibras', 14000)">Agregar al carrito</button>
+            </article>
+
+            <article class="producto" id ="vela-animalitos">
+                <img src="media/img/animalitos.webp" alt="Vela Animalitos">
+                <h3>Vela Animalitos</h3>
+                <h4>$6.000</h4>
+                <p>Tiernos y divertidos animalitos, ideales para souvenirs o regalos.</p>
+                <button onclick="agregarAlCarrito('Vela Animalitos', 6000)">Agregar al carrito</button>
+            </article>
+            
+            <!-- Más productos -->
+        </section>
+        
+        
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tienda Holística | Todos los derechos reservados</p>
+    </footer>
+
+    <script src="scripts/carrito.js"></script>
+    <script src="scripts/buscador.js"></script>
+
+</body>
+</html>

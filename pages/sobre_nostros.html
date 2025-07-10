@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Holistica</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img class="logo" src="../media/img/logo.png" alt="Logo de la tienda holística">
+            <!-- Menú Hamburguesa -->
+            <input type="checkbox" id="menu-hamburguesa">
+            <label for="menu-hamburguesa" class="menu-icon">☰</label>
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="sobre_nostros.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+            <form class="search-bar" id="form-busqueda">
+                <input type="text" placeholder="Buscar productos..." name="search">
+                <button type="submit">🔍</button>
+                <span id="limpiar-busqueda" style="display: none; cursor: pointer;">✖️</span>
+            </form>
+
+            <div id="resultados-busqueda" class="resultados"></div>
+
+            
+        </nav>
+    </header>
+    <main>
+        <h1>¿Quiénes somos?</h1>
+        <section class="container">
+            <p>En nuestra tienda, creemos en la armonía entre cuerpo, mente y espíritu. Nos especializamos en velas y accesorios holísticos, diseñados para acompañarte en tus rituales de bienestar y conectar con la energía que te rodea.</p>
+            <p>Cada uno de nuestros productos está elaborado con materias primas completamente naturales, seleccionadas cuidadosamente para garantizar pureza, calidad y respeto por el entorno. Desde cera vegetal hasta esencias naturales, cada elemento se integra para brindarte una experiencia auténtica y consciente.</p>
+            <p>Nos apasiona crear objetos que no solo embellecen tu espacio, sino que también aportan bienestar y equilibrio. Sabemos que cada detalle cuenta, y por eso trabajamos con dedicación y amor para ofrecerte productos que realmente marquen la diferencia en tu día a día.</p>
+            <p>Déjanos ser parte de tu camino hacia una vida más plena y conectada con lo esencial.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Tienda Holística | Todos los derechos reservados</p>
+    </footer>
+    <script src="../scripts/buscador.js"></script>
+    
+</body>
+</html>

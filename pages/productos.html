@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos | Tienda Holística</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <img class="logo" src="../media/img/logo.png" alt="Logo de la tienda holística">
+            <!-- Menú Hamburguesa -->
+            <input type="checkbox" id="menu-hamburguesa">
+            <label for="menu-hamburguesa" class="menu-icon">☰</label>
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="sobre_nostros.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+
+            <form class="search-bar" id="form-busqueda">
+                <input type="text" placeholder="Buscar productos..." name="search">
+                <button type="submit">🔍</button>
+                <span id="limpiar-busqueda" style="display: none; cursor: pointer;">✖️</span>
+            </form>
+
+            <div id="resultados-busqueda" class="resultados"></div>
+
+        </nav>
+    </header>
+
+    <main>
+        <h1>Nuestros Productos</h1>
+        <section class="productos">
+            <article class="producto" id="vela-ositos">
+                <img src="../media/img/ositos.webp" alt="Vela Ositos">
+                <h3>Vela Ositos</h3>
+                <h4>$7.500</h4>
+                <p>Relájate con nuestras velas de esencia natural.</p>
+                <button onclick="agregarAlCarrito('Vela Ositos', 7500)">Agregar al carrito</button>
+            </article>
+
+            <article class="producto" id="vela-buenas-vibras">
+                <img src="../media/img/buenas vibras.webp" alt="Vela Buenas Vibras">
+                <h3>Vela Buenas Vibras</h3>
+                <h4>$14.000</h4>
+                <p>Las aliadas perfectas para crear un ambiente positivo y lleno de energía. Elaboradas con cera de soja, una opción ecológica y saludable para el hogar.</p>
+                <button onclick="agregarAlCarrito('Vela Buenas Vibras', 14000)">Agregar al carrito</button>
+            </article>
+
+            <article class="producto" id="vela-animalitos">
+                <img src="../media/img/animalitos.webp" alt="Vela Animalitos">
+                <h3>Vela Animalitos</h3>
+                <h4>$6.000</h4>
+                <p>Tiernos y divertidos animalitos, ideales para souvenirs o regalos.</p>
+                <button onclick="agregarAlCarrito('Vela Animalitos', 6000)">Agregar al carrito</button>
+            </article>
+
+            <article class="producto" id="aceites-escenciales">
+                <img src="../media/img/aceites_escenciales.jpg" alt="Aceites escenciales">
+                <h3>Aceites Esenciales</h3>
+                <h4>$3.000</h4>
+                <p>Disfruta de la pureza y el bienestar con nuestro aceite esencial 100% natural. Perfecto para aromaterapia, relajación y equilibrio energético. ¡Transforma tu espacio con su esencia! 💧✨</p>
+                <button onclick="agregarAlCarrito('Aceites Esenciales', 3000)" >Agregar al carrito</button>
+            </article>
+
+            <article class="producto" id="cuencos-de-meditacion">
+                <img src="../media/img/cuencos.jpg" alt="Cuencos">
+                <h3>Cuencos de Meditacion</h3>
+                <h4>$33.000</h4>
+                <p>Eleva tu práctica espiritual con nuestros cuencos de meditación, diseñados para generar armonía y equilibrio. Su sonido puro y vibrante ayuda a la relajación, concentración y sanación energética. 🌿🔔</p>
+                <button onclick="agregarAlCarrito('Cuencos de Meditacion', 33000)">Agregar al carrito</button>
+            </article>
+
+            <article class="producto" id="velones">
+                <img src="../media/img/velones.jpg" alt="Velones">
+                <h3>Velones Aromaticos</h3>
+                <h4>$11.000</h4>
+                <p>Ilumina tu espacio con la energía y calidez de nuestros velones. Hechos con cera natural, brindan un aroma envolvente y una luz suave ideal para rituales, relajación y armonización del ambiente. 🌿🔥</p>
+                <button onclick="agregarAlCarrito('Velones Aromaticos', 11000)">Agregar al carrito</button>
+            </article>
+
+            <article class="producto" id="bombones-aromaticos">
+                <img src="../media/img/bombones_aromaticos.png" alt="Bombones aromaticos">
+                <h3>Bombones Aromaticos x 10</h3>
+                <h4>$5.000</h4>
+                <p>Disfruta de la delicada fusión de fragancia y bienestar con nuestros bombones aromáticos. Elaborados con esencias naturales, son perfectos para perfumar tu espacio y aportar armonía a tus momentos especiales. 🌿💜</p>
+                <button onclick="agregarAlCarrito('Bombones Aromaticos', 5000)">Agregar al carrito</button>
+            </article>
+
+            <article class="producto" id="vela-cactus">
+                <img src="../media/img/cactus.jpeg" alt="Vela Cactus">
+                <h3>Vela Cactus</h3>
+                <h4>$3.700</h4>
+                <p>Dale un toque único a tu espacio con nuestra vela artesanal en forma de cactus. Elaborada con cera natural y esencias suaves, combina decoración y bienestar, creando un ambiente cálido y armonioso. 🕯️🌿</p>
+                <button onclick="agregarAlCarrito('Vela Cactus', 3700)">Agregar al carrito</button>
+            </article>
+
+            <article class="producto" id="vela-margarita">
+                <img src="../media/img/margarita.jpeg" alt="Vela Margarita">
+                <h3>Vela Margarita</h3>
+                <h4>$3.700</h4>
+                <p>Añade frescura y belleza a tu espacio con nuestra vela artesanal en forma de margarita. Elaborada con cera natural y esencias delicadas, aporta armonía y un toque floral encantador a cualquier ambiente. 🕯️🌿</p>
+                <button onclick="agregarAlCarrito('Vela Margarita', 3700)">Agregar al carrito</button>
+            </article>
+
+            <article class="producto" id="porta-sahumerio">
+                <img src="../media/img/portasahumerio.jpg" alt="Porta Sahumerio">
+                <h3>Portasahumerio</h3>
+                <h4>$18.500</h4>
+                <p>Embellece tu espacio y eleva tus rituales con nuestro portasahumerio decorativo. Diseñado con materiales naturales y detalles únicos, es el complemento perfecto para armonizar ambientes y disfrutar de fragancias relajantes. 🕊️🔥</p>
+                <button onclick="agregarAlCarrito('Portasahumerio', 18500)">Agregar al carrito</button>
+            </article>
+
+            <article class="producto" id="vela-postre">
+                <img src="../media/img/postre.jpeg" alt="vela postre">
+                <h3>Vela Postre</h3>
+                <h4>$8.000</h4>
+                <p>Endulza tu espacio con nuestra vela artesanal en forma de postre. Con su diseño detallado y aroma irresistible, es el complemento perfecto para decorar y disfrutar de un ambiente acogedor y cálido. 🕯️🌿</p>
+                <button onclick="agregarAlCarrito('Vela Postre', 8000)">Agregar al carrito</button>
+            </article>
+
+            <article class="producto" id="vela-rosa">
+                <img src="../media/img/rosa.jpeg" alt="vela rosa">
+                <h3>Vela Rosa</h3>
+                <h4>$3.700</h4>
+                <p>Elegancia y delicadeza en una vela única. Nuestra vela con forma de rosa, hecha con cera natural y esencias suaves, es perfecta para decorar y crear un ambiente romántico y armonioso. 🕯️🌿</p>
+                <button onclick="agregarAlCarrito('Vela Rosa', 3700)">Agregar al carrito</button>
+            </article>
+
+            <article class="producto" id="sahumerios-x-10">
+                <img src="../media/img/sahumerios.jpg" alt="sahumerios">
+                <h3>Sahumerios x 10</h3>
+                <h4>$3.500</h4>
+                <p>Sumérgete en un ambiente de armonía y bienestar con nuestro pack de 10 sahumerios naturales. Elaborados con esencias puras, son ideales para rituales, meditación y limpieza energética, envolviendo tu espacio con fragancias relajantes y revitalizantes. 🔥🕊️</p>
+                <button onclick="agregarAlCarrito('Sahumerios x 10', 3500)">Agregar al carrito</button>
+            </article>
+
+            <article class="producto" id="vela-suculentas">
+                <img src="../media/img/suculentas.jpeg" alt="Vela Suculentas">
+                <h3>Vela Suculentas</h3>
+                <h4>$4.200</h4>
+                <p>Un toque natural y encantador para tu espacio. Nuestra vela con forma de suculenta, hecha con cera vegetal y detalles únicos, combina decoración y bienestar, creando un ambiente cálido y armonioso. 🕯️🌿</p>
+                <button onclick="agregarAlCarrito('Vela Suculentas', 4200)">Agregar al carrito</button>
+            </article>
+
+            <article class="producto" id="tabletas-aromaticas">
+                <img src="../media/img/tabletas_aromaticas.jpeg" alt="Tabletas Aromaticas">
+                <h3>Tabletas Aromaticas</h3>
+                <h4>$5.000</h4>
+                <p>Llena tu espacio con fragancias únicas y naturales. Nuestras tabletas aromáticas, elaboradas con esencias puras, son perfectas para perfumar ambientes, cajones y armarios, brindando un toque de frescura y bienestar. 🌸💜</p>
+                <button onclick="agregarAlCarrito('Tabletas Aromaticas', 5000)">Agregar al carrito</button>
+            </article>
+
+            <article class="producto" id="velas-decorativas">
+                <img src="../media/img/velas_decorativas.jpeg" alt="Velas Decorativas">
+                <h3>Velas Decorativas <h3>
+                <h4>$5.000</h4>
+                <p>Dale un toque especial a tu espacio con nuestras velas decorativas. Diseñadas con formas únicas y detalles artesanales, crean ambientes cálidos, armoniosos y llenos de estilo. 🌿💜</p>
+                <button onclick="agregarAlCarrito('Velas Decorativas', 5000)">Agregar al carrito</button>
+            </article>
+
+            <article class="producto" id="velon-suculentas">
+                <img src="../media/img/velon_suculentas.jpeg" alt="Velon Suculentas">
+                <h3>Velon Suculentas<h3>
+                <h4>$9.000</h4>
+                <p>Una fusión perfecta entre naturaleza y calidez. Nuestro velón con diseño de suculentas, elaborado con cera vegetal y esencias suaves, aporta armonía y estilo, creando un ambiente acogedor y relajante. 🕯️🌿</p>
+                <button onclick="agregarAlCarrito('Velon Suculentas', 9000)">Agregar al carrito</button>
+            </article>
+
+            <article class="producto" id="velas-relax">
+                <img src="../media/img/velas_relax.jpg" alt="Velas Relax">
+                <h3>Velas Relax<h3>
+                <h4>$9.300</h4>
+                <p>Sumérgete en la tranquilidad con nuestras velas Relax. Elaboradas con cera natural y esencias suaves, crean un ambiente armonioso, ideal para momentos de calma, meditación y descanso. 🌿💜</p>
+                <button onclick="agregarAlCarrito('Velas Relax', 9300)">Agregar al carrito</button>
+            </article>
+
+            
+        </section>
+
+        <section>
+            <div id="contenedor-carrito">
+                <h3>🛒 Carrito</h3>
+                <ul id="carrito"></ul>
+                <p><strong>Total:</strong> $<span id="total">0</span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tienda Holística | Todos los derechos reservados</p>
+    </footer>
+
+    <script src="../scripts/carrito.js"></script>
+    <script src="../scripts/buscador.js"></script>
+
+</body>
+</html>

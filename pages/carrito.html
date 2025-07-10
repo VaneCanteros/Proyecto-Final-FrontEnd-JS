@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito |Tienda Holistica</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img class="logo" src="../media/img/logo.png" alt="Logo de la tienda holística">
+            <!-- Menú Hamburguesa -->
+            <input type="checkbox" id="menu-hamburguesa">
+            <label for="menu-hamburguesa" class="menu-icon">☰</label>
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="sobre_nostros.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+
+            <form class="search-bar" id="form-busqueda">
+                <input type="text" placeholder="Buscar productos..." name="search">
+                <button type="submit">🔍</button>
+                <span id="limpiar-busqueda" style="display: none; cursor: pointer;">✖️</span>
+            </form>
+
+            <div id="resultados-busqueda" class="resultados"></div>
+
+        </nav>
+    </header>
+
+    <main>
+        <div class="carrito">
+            <h2>Carrito de Compras</h2>
+            <div class="carrito-items" id="carrito">
+                <!-- Aquí se agregarán los productos dinámicamente -->
+            </div>
+            <div class="total" id="total">
+                <h3>Total: $<span id="total">0</span></h3>
+            </div>
+            <button class="pagar">Pagar</button>
+        </div>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tienda Holística | Todos los derechos reservados</p>
+    </footer>
+
+    <script src="../scripts/carrito.js"></script>
+    <script src="../scripts/buscador.js"></script>
+</body>
+</html>
